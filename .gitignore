@@ -13,7 +13,7 @@
 .mvn/  
 .project  
 .settings/  
-README.md  
+.gitignore 
 mvnw.cmd  
 node/  
 node_modules/  
@@ -29,5 +29,5 @@ yarn.lock
 /src/main/main.iml  
 /.idea/misc.xml  
 /.idea/libraries  
-.idea  
+.idea/
 libraries  
