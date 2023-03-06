@@ -1,4 +1,5 @@
 package Task2.models;
 
-public interface Toy {
+public class Toy {
+
 }
