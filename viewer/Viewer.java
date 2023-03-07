@@ -2,11 +2,14 @@ package Task2.viewer;
 
 import Task2.models.GameMachine;
 import Task2.models.Toys;
+import Task2.models.WinToys;
 
 public class Viewer {
-    public static void viewAll(GameMachine machine) {
+    public static void viewAllGameToy(GameMachine machine) {
         for (Toys toy : machine.getToys()) {
-            System.out.println(toy);
+            if (toy.getCount() != 0) {
+                System.out.println(toy);
+            }
         }
     }
 
@@ -15,6 +18,12 @@ public class Viewer {
             if (toy.getId() == id) {
                 System.out.println(toy);
             }
+        }
+    }
+
+    public static void viewAllWinerToy(WinToys viewing) {
+        for (Toys toy : viewing.getToys()) {
+            System.out.println(toy);
         }
     }
 }

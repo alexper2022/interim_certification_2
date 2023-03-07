@@ -11,7 +11,7 @@ public class GameMachine {
 
     @Override
     public String toString() {
-        System.out.println("Игрушки:\n");
+        System.out.println("Игрушки для лотереи:\n");
         return null;
     }
 
