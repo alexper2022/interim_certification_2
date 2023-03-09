@@ -23,7 +23,6 @@ public class GameToy {
 		int idWin = allId.get(win);
 		System.out.println("Вы выиграли:");
 		Viewer.viewOne(machine, idWin);
-		System.out.println(winerToys.getToys().size());
 		for (Toys toyM : machine.getToys()) {
 			if (toyM.getId() == idWin) {
 				Toys additionToy2 = new Toys(toyM.getId(), toyM.getName(), 1, toyM.getFrequencyOfLoss());
