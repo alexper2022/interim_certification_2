@@ -50,8 +50,6 @@ public class MainMenu {
 				case (4):
 					System.out.println("\n-=< Провести розыгрыш >=-\n");
 					GameToy.lottery(machine, winerToys);
-
-
 					RunApp(machine, winerToys);
 				case (5):
 					System.out.println("\n-=< Добавить игрушку >=-\n");
