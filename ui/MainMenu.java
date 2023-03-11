@@ -1,9 +1,9 @@
-package Task2.ui;
+package Task22.ui;
 
-import Task2.models.GameMachine;
-import Task2.models.WinToys;
-import Task2.service.*;
-import Task2.viewer.Viewer;
+import Task22.models.GameMachine;
+import Task22.models.WinToys;
+import Task22.service.*;
+import Task22.viewer.Viewer;
 
 
 public class MainMenu {

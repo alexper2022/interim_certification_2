@@ -1,12 +1,12 @@
-package Task2.models;
+package Task22.models;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
 
 public class WinToys {
-    private ArrayList<Toys> toys = new ArrayList<Toys>();
+    private ArrayList<ToysWin> toys = new ArrayList<ToysWin>();
 
-    public WinToys(ArrayList<Toys> toys) {
+    public WinToys(ArrayList<ToysWin> toys) {
         this.toys = toys;
     }
 
@@ -16,17 +16,16 @@ public class WinToys {
         return null;
     }
 
-    public ArrayList<Toys> getToys() {
+    public ArrayList<ToysWin> getToys() {
         return toys;
     }
 
-    public void setToys(ArrayList<Toys> toys) {
+    public void setToys(ArrayList<ToysWin> toys) {
         this.toys = toys;
     }
 
-    public void addToys(WinToys winToys, int id, String name, float procent) {
-        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        Toys newToy = new Toys(id, name, 1, procent);
+    public void addToys(WinToys winToys, int id, String name, float procent, String dateTime) {
+        ToysWin newToy = new ToysWin(id, name, 1, procent, dateTime);
         winToys.getToys().add(newToy);
     }
 

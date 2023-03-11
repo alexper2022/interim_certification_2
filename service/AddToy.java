@@ -1,11 +1,11 @@
-package Task2.service;
+package Task22.service;
 
-import Task2.models.GameMachine;
-import Task2.models.Toys;
+import Task22.models.GameMachine;
+import Task22.models.Toys;
 
 import java.util.ArrayList;
 
-import static Task2.service.UserInput.user_in;
+import static Task22.service.UserInput.user_in;
 
 
 public class AddToy {

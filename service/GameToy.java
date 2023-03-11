@@ -1,10 +1,12 @@
-package Task2.service;
+package Task22.service;
 
-import Task2.models.GameMachine;
-import Task2.models.Toys;
-import Task2.models.WinToys;
-import Task2.viewer.Viewer;
+import Task22.models.GameMachine;
+import Task22.models.Toys;
+import Task22.models.ToysWin;
+import Task22.models.WinToys;
+import Task22.viewer.Viewer;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -19,13 +21,13 @@ public class GameToy {
 		}
 		Random rnd = new Random();
 		int win = rnd.nextInt(0, allId.size());
-		System.out.println("allId.get(win)" + allId.get(win));
 		int idWin = allId.get(win);
 		System.out.println("Вы выиграли:");
 		Viewer.viewOne(machine, idWin);
+		Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 		for (Toys toyM : machine.getToys()) {
 			if (toyM.getId() == idWin) {
-				Toys additionToy2 = new Toys(toyM.getId(), toyM.getName(), 1, toyM.getFrequencyOfLoss());
+				ToysWin additionToy2 = new ToysWin(toyM.getId(), toyM.getName(), 1,(float) toyM.getFrequencyOfLoss(), timestamp.toString());
 				winerToys.getToys().add(additionToy2);
 				toyM.setCount(toyM.getCount() - 1);
 			}

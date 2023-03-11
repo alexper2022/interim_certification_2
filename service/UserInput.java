@@ -1,4 +1,4 @@
-package Task2.service;
+package Task22.service;
 
 import java.util.Scanner;
 

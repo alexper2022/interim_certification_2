@@ -1,8 +1,9 @@
-package Task2.service;
+package Task22.service;
 
-import Task2.models.GameMachine;
-import Task2.models.Toys;
-import Task2.models.WinToys;
+import Task22.models.GameMachine;
+import Task22.models.Toys;
+import Task22.models.ToysWin;
+import Task22.models.WinToys;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -17,8 +18,8 @@ public class FileInOut {
 	public static void writerWiner(WinToys toys) {
 
 		Formatter f = new Formatter();
-		for (Toys toy : toys.getToys()) {
-			f.format("%d;%s;%d;%.2f\n", toy.getId(), toy.getName(), toy.getCount(), toy.getFrequencyOfLoss());
+		for (ToysWin toy : toys.getToys()) {
+			f.format("%d;%s;%d;%.2f\n", toy.getId(), toy.getName(), toy.getCount(), toy.getFrequencyOfLoss(), toy.getDataTime());
 		}
 		try {
 			FileWriter fw = new FileWriter("WinToys.csv", false);
@@ -54,8 +55,8 @@ public class FileInOut {
 		} catch (IOException ex) {
 			System.out.println(ex);
 		}
-		ArrayList<Toys> winToys = toys.getToys();
-		Toys toy = null;
+		ArrayList<ToysWin> winToys = toys.getToys();
+		ToysWin toy = null;
 		ArrayList<List> temp = new ArrayList<>();
 		for (String line : result) {
 			temp.add(List.of(line.split(";")));
@@ -65,7 +66,8 @@ public class FileInOut {
 				int count = Integer.parseInt((String) el.get(2));
 				String frequency = ((String) el.get(3)).replace(",", ".");
 				float frequencyOfLoss = Float.parseFloat(frequency);
-				toy = new Toys(id, name, count, frequencyOfLoss);
+				String dateTime = el.get(4).toString();
+				toy = new ToysWin(id, name, count, frequencyOfLoss, dateTime);
 			}
 			winToys.add(toy);
 		}
