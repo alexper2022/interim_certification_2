@@ -1,4 +1,4 @@
-package Task22.models;
+package Task2.models;
 
 public class Toys {
     int id;

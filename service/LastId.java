@@ -1,7 +1,7 @@
-package Task22.service;
+package Task2.service;
 
-import Task22.models.GameMachine;
-import Task22.models.Toys;
+import Task2.models.GameMachine;
+import Task2.models.Toys;
 
 public class LastId {
     public static int lastId(GameMachine machine) {

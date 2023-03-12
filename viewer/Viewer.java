@@ -1,8 +1,8 @@
-package Task22.viewer;
+package Task2.viewer;
 
-import Task22.models.GameMachine;
-import Task22.models.Toys;
-import Task22.models.WinToys;
+import Task2.models.GameMachine;
+import Task2.models.Toys;
+import Task2.models.WinToys;
 
 public class Viewer {
     public static void viewAllGameToy(GameMachine machine) {
