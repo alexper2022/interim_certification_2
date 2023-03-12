@@ -1,10 +1,10 @@
-package Task22.service;
+package Task2.service;
 
-import Task22.models.GameMachine;
-import Task22.models.Toys;
-import Task22.models.ToysWin;
-import Task22.models.WinToys;
-import Task22.viewer.Viewer;
+import Task2.models.GameMachine;
+import Task2.models.Toys;
+import Task2.models.ToysWin;
+import Task2.models.WinToys;
+import Task2.viewer.Viewer;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
